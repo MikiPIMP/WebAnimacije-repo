@@ -1,0 +1,60 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: aquamarine;
+    display: grid;
+    place-content: center;
+}
+
+.primarni{
+    margin: 10vh;
+    background-color: aqua;
+    border-radius: 6px;
+    height: 60vh;
+    width: 50vw;
+    border: 2px solid white
+
+}
+
+.sekundarni{
+    background-color: rgb(42, 165, 44);
+    border-radius: 6px;
+    height: 25%;
+    width: 25%;
+    transition: transform 1s ease-in-out;
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+}
+
+
+.primarni:hover .sekundarni{
+    animation: left-to-right 7s infinite cubic-bezier(0.11, 0.68, 0.84, -0.95) 0.3s forwards alternate;
+}
+
+@keyframes left-to-right {
+    0%{
+        transform: translateX(0);
+        background-color: rgb(42, 165, 44);
+    }
+
+    25%{
+        transform: translateY(300%);
+        background-color: rgb(21, 161, 174);
+    }
+
+    50%{
+        transform: translateX(300%) translateY(300%);
+        background-color: rgb(162, 198, 29);
+    }
+
+    75%{
+        transform: translateX(300%);
+        background-color: rgb(194, 20, 213);
+    }
+
+    100%{
+        transform: translateX(0);
+        background-color: brown;
+    }
+}
